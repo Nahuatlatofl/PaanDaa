@@ -13,22 +13,22 @@ El repositorio del Proyecto
  + 📜 Nuevo Archivo.
 
 #### Usar los siguientes estilos
-+ Flujos de control
-  Sentencia(condición)
+##### Flujos de control
+Sentencia(condición)
   {
     <Codigo>;
   }Sentencia
   {
     <Codigo>;
   }
-+ Funciones
+###### Funciones
   Funcion(Par1, Par2)
   {
     <Codigo>;
   }
   
   La primera letra de una función debe ser mayuscula.
-+ Variables
+##### Variables
   Globales: g-varibleNombre;
   Locales: l-variableNombre;
   Miembro: m-varibleNombre;
