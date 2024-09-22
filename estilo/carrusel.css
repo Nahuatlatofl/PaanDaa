@@ -1,0 +1,56 @@
+.carrusel {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrusel ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    animation: slide 15s infinite ease-in-out;
+}
+
+.carrusel li {
+    flex: 0 0 100%;
+    list-style: none;
+    position: relative;
+}
+
+.carrusel .texto {
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255); 
+    background-color: rgb(118, 15, 15); 
+    padding: 5px 10px; 
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+
+.carrusel .texto h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.carrusel img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+}
