@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../Imágenes/PaanDaa"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PaanDaa"
+	}
+}
