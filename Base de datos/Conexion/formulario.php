@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/barra_nav.css">
-    <link rel="icon" href="image-conexion/SYNTHMIND.ico">
+    <link rel="stylesheet" href="estilo/barra_nav.css">
     <title>Formulario</title>
     <link rel="stylesheet" href="\proyecto_web\Conexion\image-conexion\style2\formulario.css">
 </head>

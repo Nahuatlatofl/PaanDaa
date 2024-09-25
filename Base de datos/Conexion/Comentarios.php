@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="image-conexion/SYNTHMIND.ico">
+
     <title>Comentarios</title>
     <link rel="stylesheet" href="\proyecto_web\Conexion\image-conexion\style2\coment.css">
 </head>
@@ -58,7 +58,7 @@
         <?php } ?>
     </table>
     <center>
-        <button><a href="/proyecto_web/index.php">Synthmind_IV</a></button>
+        <button><a href="/Paandaa/Index.php">PannDaa</a></button>
     </center>
 </body>
 
