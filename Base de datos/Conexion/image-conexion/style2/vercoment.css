@@ -1,0 +1,115 @@
+/* Estilos base */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Ajuste el fondo para mejor contraste */
+}
+
+th, td {
+    border: 1px solid #444; /* Color de borde para mejor contraste */
+    padding: 12px; /* Mayor padding para mejor legibilidad */
+    text-align: left;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
+    color: white;
+}
+
+td {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #1E90FF; /* Color de enlace ajustado para mejor visibilidad */
+}
+
+#A1 {
+    background-color: rgba(1, 44, 1, 0.895);
+    text-align: center;
+}
+
+button {
+    background-color: #022447; /* Botón azul para mejor contraste */
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #031f3a; /* Fondo más oscuro en hover */
+}
+
+button:active {
+    background-color: #696969; /* Fondo gris en active */
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-image: url("/proyecto_web/Conexion/image-conexion/VerComentarios.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif; /* Fuente estándar para mejor legibilidad */
+}
+
+/* Media Queries para la responsividad */
+@media (max-width: 768px) {
+    th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    th {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+    }
+
+    td {
+        border: none;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    td:before {
+        content: attr(data-label);
+        flex: 1;
+        font-weight: bold;
+    }
+
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}

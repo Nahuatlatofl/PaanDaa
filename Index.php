@@ -16,7 +16,7 @@
 
 <body>
     <div class="barra-nav">
-        <a href="index.html" class="logo-link">
+        <a href="index.php" class="logo-link">
             <div class="logo-container">
                 <img src="estilo/imagen/LOGO.jpg" alt="Logo">
                 <h1>PannDaa</h1>
@@ -28,10 +28,12 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Carrito</a></li>
+            <li><a href="#">Carrito</a></li>
                 <li><a href="#">Trabaja con nosotros</a></li>
                 <li><a href="#">Política de privacidad</a></li>
-                <li><a href="#">Acerca de</a></li>
+                <li><a href="Acerca_de.html">Acerca de</a></li>
+                <li><a href="Base de datos/Conexion/formulario.php">Opinar</a></li>
+                <li><a href="Base de datos/Conexion/VerComentarios.php">Reseñas</a></li>
             </ul>
         </nav>
     </div>
@@ -43,7 +45,7 @@
     <div class="carrusel">
         <ul>
             <li>
-                <a href="index.html">
+                <a href="index.php">
                     <img src="estilo/imagen/Productos.png" alt="Imagen de un mundo">
                     <div class="texto">
                         <h2>Productos</h2>
@@ -53,7 +55,7 @@
             </li>
             
             <li>
-                <a href="index.html">
+                <a href="index.php">
                     <img src="estilo/imagen/Los-mirones.png" alt="Imagen de un restaurante">
                     <div class="texto">
                         <h2>¡Qué ricos! Digo, ¡Qué hermosos!</h2>
@@ -62,10 +64,9 @@
                 </a>
             </li>
             <li>
-                <p>hola
-                    
+                
                 </p>
-                <a href="index.html">
+                <a href="index.php">
                     <img src="estilo/imagen/Pan-de-Gato.png" alt="Imagen de tecnología">
                     <div class="texto">
                         <h2>Te gustan los gatos</h2>
@@ -74,7 +75,7 @@
                 </a>
             </li><p></p>
             <li>
-                <a href="index.html">
+                <a href="index.php">
                     <img src="estilo/imagen/Pan-la-disque.png" alt="Imagen de dulces">
                     <div class="texto">
                         <h2>Dice que es mas que un pan</h2>
@@ -83,7 +84,7 @@
                 </a>
             </li>
             <li>
-                <a href="index.html">
+                <a href="index.php">
                     <img src="estilo/imagen/Pan-de-cochino.png" alt="Imagen de panadería">
                     <div class="texto">
                         <h2>!Oing¡ !Oing¡</h2>
@@ -92,7 +93,7 @@
                 </a>
             </li>
             <li>
-                <a href="index.html">
+                <a href="index.php">
                     <img src="estilo/imagen/Pan-de-Caracol.png" alt="Imagen de café">
                     <div class="texto">
                         <h2>Tardador mucho en llegar hasta aqui</h2>
@@ -127,7 +128,6 @@
                 </div>
             </div>
         </div>
-        <p>Y corrregi mi vsc jaajaj</p>
         <div class="grupo-2">
             <small>&copy; 2024 <b>PaanDaa</b>&reg; - Todos los Derechos Reservados.</small>
         </div>

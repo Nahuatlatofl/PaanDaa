@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    background-color:transparent;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="int"] {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: gray;
+}
+
+input[type="text"]:focus,
+input[type="int"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px #09048b;
+}
+body {
+    background-image: url("/proyecto_web/Conexion/image-conexion/act.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
