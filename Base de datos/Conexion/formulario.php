@@ -31,6 +31,7 @@
             <button onclick="window.location.href='/proyecto_web/index.php'">Synthmind_IV</button>
             <button onclick="window.location.href='Comentarios.php'">Comentarios Mas Populares</button>
         </div>
+        <p>jpjwpxwwdinidw</p>
     </div>  
 </body>
 </html>
