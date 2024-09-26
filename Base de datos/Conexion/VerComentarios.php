@@ -33,10 +33,6 @@
                 <?php } ?>
         </tbody>
     </table>
-    <center>
-        <button>
-            <a href="/proyecto_web/index.php">Synthmind_IV</a>
-        </button>
-    </center>
+    
 </body>
 </html>
