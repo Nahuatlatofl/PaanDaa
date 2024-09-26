@@ -13,13 +13,6 @@
 
     <title>PaanDaa</title>
 </head>
-po
-
-
-
-
-
-
 <body>
     <div class="barra-nav">
         <a href="index.php" class="logo-link">
@@ -33,20 +26,21 @@ po
             <input type="text" placeholder="Buscar...">
         </div>
         <nav>
-            <ul>
-            <li><a href="#">Carrito</a></li>
+        <ul>
+                <li><a href="#">Carrito</a></li>
                 <li><a href="#">Trabaja con nosotros</a></li>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="Acerca_de.html">Acerca de</a></li>
                 <li><a href="Base de datos/Conexion/formulario.php">Opinar</a></li>
-                <li><a href="Base de datos/Conexion/VerComentarios.php">Reseñas</a></li>
-            </ul>
+                <li><a href="Base de datos/Conexion/Comentarios.php">Reseñas</a></li>
+            </ul>  
         </nav>
     </div>
 
     <div class="index">
         <h2 class="titulo">Bienvenido </h2>
     </div>
+    
 
     <div class="carrusel">
         <ul>

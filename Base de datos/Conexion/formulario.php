@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo/barra_nav.css">
+    <link rel="stylesheet" href="\PaanDaa\Base de datos\Conexion\image-conexion\style2\barra_nav.css">
+    <link rel="stylesheet" href="\PaanDaa\Base de datos\Conexion\image-conexion\style2\formulario.css">
     <title>Formulario</title>
-    <link rel="stylesheet" href="\proyecto_web\Conexion\image-conexion\style2\formulario.css">
+    
 </head>
 
 <body>
+<div class="barra-nav">
+        <a href="\PaanDaa\Index.php" class="logo-link">
+            <div class="logo-container">
+                <img src="\PaanDaa\Base de datos\Conexion\image-conexion\LOGO.jpg" alt="Logo">
+                <h1>PannDaa</h1>
+                <div class="eslogan">Dulzura suave, Tradicion fuerte</div>
+            </div>
+        </a>
+        <div class="busqueda-container">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Carrito</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="\PaanDaa\Acerca_de.html">Acerca de</a></li>
+                <li><a href="\PaanDaa\Base de datos\Conexion\formulario.php">Opinar</a></li>
+                <li><a href="\PaanDaa\Base de datos\Conexion\Comentarios.php">Reseñas</a></li>
+            </ul>
+        </nav>
+    </div>
+    
     <div id="formulario">
         <h1>Comenta</h1>
         <form action="conect_bd.php" method="post">
@@ -27,11 +51,10 @@
             <input type="submit" value="Guardar">
         </form>
 
-        <div class="links">
-            <button onclick="window.location.href='/proyecto_web/index.php'">Synthmind_IV</button>
-            <button onclick="window.location.href='Comentarios.php'">Comentarios Mas Populares</button>
-        </div>
-        <p>jpjwpxwwdinidw</p>
+        <div class="links" onclick="window.location.href='Comentarios.php'" style="cursor: pointer;">
+    <button>Comentarios</button>
+</div>
+
     </div>  
 </body>
 </html>

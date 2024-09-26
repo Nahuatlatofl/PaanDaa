@@ -1,14 +1,32 @@
 
+/* Otros estilos (por ejemplo, tablas o botones) */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/proyecto_web/Conexion/image-conexion/Comentarios.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    padding: 30px; /* Añade un padding general para separar el contenido de los bordes del cuerpo */
+
+
+}
 table {
     border-collapse: collapse;
     width: 100%;
+    margin-top: 60px; /* Aumenta el margen superior para mayor separación */
     color: black;
 }
 
-th,
-td {
+th, td {
     border: 1px solid black;
-    padding: 8px;
+    padding: 10px; /* Aumenta el padding para más espacio dentro de las celdas */
     text-align: left;
 }
 
@@ -21,28 +39,25 @@ td {
     color: white;
 }
 
+/* Estilos para enlaces */
 a {
     text-decoration: none;
     color: white;
 }
 
-#A1 {
-    background-color: rgba(1, 7, 44, 0.895);
-    text-align: center;
-}
-
+/* Estilos para el botón personalizado */
 button {
     background-color: navy;
     border: none;
     color: white;
     text-align: center;
     font-size: 16px;
-    padding: 10px 24px;
+    padding: 12px 26px; /* Aumenta el padding para un botón más grande */
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s;
-    margin-right: 10px;
+    margin-right: 15px; /* Aumenta el margen derecho para más espacio entre botones */
 }
 
 button:hover {
@@ -53,15 +68,11 @@ button:active {
     background-color: rgb(166, 166, 166);
 }
 
+/* Mantén los enlaces en los botones con su color original */
 button a {
     text-decoration: none;
     color: white;
 }
 
-body {
-    background-image: url("/proyecto_web/Conexion/image-conexion/Comentarios.jpg");
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-}
+/* Estilos para el cuerpo */
+
