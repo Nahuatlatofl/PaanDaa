@@ -47,21 +47,11 @@
         $selec = $con->query("SELECT * FROM 4bmpg");
         while ($fila = $selec->fetch_assoc()) {?>
         <tr>
-            <td>
-                <?php echo $fila['id'] ?>
-            </td>
-            <td>
-                <?php echo $fila['NombreCompleto'] ?>
-            </td>
-            <td>
-                <?php echo $fila['Comentario'] ?>
-            </td>
-            <td>
-                <?php echo $fila['Edad'] ?>
-            </td>
-            <td>
-                <?php echo $fila['fecha'] ?>
-            </td>
+            <td><?php echo $fila['id'] ?></td>
+            <td><?php echo $fila['NombreCompleto'] ?></td>
+            <td><?php echo $fila['Comentario'] ?></td>
+            <td><?php echo $fila['Edad'] ?></td>
+            <td><?php echo $fila['fecha'] ?></td>
         </tr>
         <?php } ?>
 
@@ -80,26 +70,19 @@
         $selec = $con -> query("SELECT * FROM 4bmpg");
         while ($fila = $selec-> fetch_assoc()) {?>
         <tr>
-            <td>
-                <?php echo $fila['id'] ?>
-            </td>
-            <td>
-                <?php echo $fila['NombreCompleto'] ?>
-            </td>
-            <td>
-                <?php echo $fila['Comentario'] ?>
-            </td>
-            <td>
-                <?php echo $fila['Edad'] ?>
-            </td>
-            <td>
-                <?php echo $fila['fecha'] ?>
-            </td>
+            <td><?php echo $fila['id'] ?></td>
+            <td><?php echo $fila['NombreCompleto'] ?></td>
+            <td><?php echo $fila['Comentario'] ?></td>
+            <td><?php echo $fila['Edad'] ?></td>
+            <td><?php echo $fila['fecha'] ?></td>
             <td id="A1"><a href="actualizar.php?id=<?php echo $fila['id'] ?>">EDITAR</a></td>
             <td id="A1"><a href="borrar.php?id=<?php echo $fila['id']?>">ELIMINAR</a></td>
         </tr>
         <?php } ?>
     </table>
+    <center>
+        <button><a href="/proyecto_web/index.php">Synthmind_IV</a></button>
+    </center>
 </body>
 
 </html>

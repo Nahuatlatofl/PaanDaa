@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/barra_nav.css">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="\proyecto_web\Conexion\image-conexion\style2\formulario.css">
+    <title>Comentarios</title>
+    <link rel="icon" href="image-conexion/SYNTHMIND.ico">
+    <link rel="stylesheet" href="\proyecto_web\Conexion\image-conexion\style2\vercoment.css">
 </head>
-
 <body>
-    <div id="formulario">
-        <h1>Comenta</h1>
-        <form action="conect_bd.php" method="post">
-            <label  for="NombreCompleto">Nombre Completo:</label><br>
-            <input type="text" id="NombreCompleto" name="NombreCompleto" placeholder="Nombre Completo" required><br>
-
-            <label for="Comentario">Queja o Sugerencia:</label><br>
-            <input type="text" id="Comentario" name="Comentario" placeholder="Queja o Sugerencia" required><br>
-
-            <label for="Edad">Edad:</label><br>
-            <input type="number" id="Edad" name="Edad" placeholder="Edad" required><br>
-
-            <label for="fecha">Fecha (ddmmyy):</label><br>
-            <input type="text" id="fecha" name="fecha" placeholder="Fecha ddmmyy" required><br>
-
-            <input type="submit" value="Guardar">
-        </form>
-
-        <div class="links">
-            <button onclick="window.location.href='/PaanDaa/Index.php'">PaanDaa</button>
-            <button onclick="window.location.href='Comentarios.php'">Comentarios Mas Populares</button>
-        </div>
-    </div>  
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Nombre Completo</th>
+                <th>Sugerencia</th>
+                <th>Edad</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            include 'conexion.php';
+            $selec = $con->query("SELECT * FROM 4bmpg");
+            while ($fila = $selec->fetch_assoc()) {?>
+                <tr>
+                    <td data-label="ID"><?php echo $fila['id'] ?></td>
+                    <td data-label="Nombre Completo"><?php echo $fila['NombreCompleto'] ?></td>
+                    <td data-label="Sugerencia"><?php echo $fila['Comentario'] ?></td>
+                    <td data-label="Edad"><?php echo $fila['Edad'] ?></td>
+                    <td data-label="Fecha"><?php echo $fila['fecha'] ?></td>
+                </tr>
+                <?php } ?>
+        </tbody>
+    </table>
+    <center>
+        <button>
+            <a href="/proyecto_web/index.php">Synthmind_IV</a>
+        </button>
+    </center>
 </body>
 </html>
