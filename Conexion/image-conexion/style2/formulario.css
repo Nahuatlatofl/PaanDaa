@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -7,8 +8,12 @@ body {
     align-items: flex-start;
     justify-content: center;
     height: 100vh;
+    background-image: url("/PaanDaa/Conexion/image-conexion/formulario.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/* Estilo del formulario */
 #formulario {
     background-color: white;
     padding: 30px;
@@ -18,15 +23,15 @@ body {
     margin-top: 110px;
 }
 
+/* Estilos para los campos de texto y número */
 input[type="text"],
-input[type="number"],
-input[type="submit"] {
+input[type="number"] {
     background-color: transparent;
-    color: rgb(0, 0, 0);
+    color: #000;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #000000;
+    border: 1px solid #000;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -38,38 +43,48 @@ input[type="number"]:focus {
     box-shadow: 0 0 5px #fddd0c;
 }
 
+/* Estilos del botón submit */
 input[type="submit"] {
     background-color: transparent;
-    color: rgb(0, 0, 0);
+    color: #000;
     border: none;
     cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 input[type="submit"]:hover {
     background-color: #6aa1e3;
+    color: white;
 }
 
+/* Estilo del botón */
 button {
     display: block;
     margin: 10px auto;
     padding: 10px 20px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: #000;
+    color: #fff;
     border-radius: 5px;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
 button a {
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-decoration: none;
 }
 
+/* Títulos */
 h1 {
     text-align: center;
     color: black;
     margin-bottom: 20px;
 }
 
+/* Estilo del contenedor de los links */
 .links {
     text-align: center;
     align-items: center;
@@ -77,12 +92,8 @@ h1 {
     margin-bottom: 20px; 
 }
 
+/* Estilos de los labels */
 label {
     font-family: Georgia;
-    color: rgb(255, 255, 255);
-}
-body {
-    background-image: url("/PaanDaa/Conexion/image-conexion/formulario.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    color: #000;
 }

@@ -1,15 +1,19 @@
-
-/* Otros estilos (por ejemplo, tablas o botones) */
+/* Estilos globales para la página */
 body {
     font-family: Arial, sans-serif;
     background-color: white;
+    background-image: url("/PaanDaa/Conexion/image-conexion/Comentarios.jpg"); /* Ruta corregida */
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     height: 100vh;
+    color: white;
 }
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -24,7 +28,7 @@ th, td {
 }
 
 th {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5); /* Ajuste en la opacidad */
     color: black;
 }
 
@@ -61,15 +65,7 @@ button:active {
     background-color: rgb(166, 166, 166);
 }
 
-/* Mantén los enlaces en los botones con su color original */
 button a {
     text-decoration: none;
     color: white;
 }
-body{
-    background-image: url("/Conexion/image-conexion/Comentarios.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/* Estilos para el cuerpo */
-
