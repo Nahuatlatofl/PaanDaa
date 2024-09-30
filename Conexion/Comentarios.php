@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="\PaanDaa\Base de datos\Conexion\image-conexion\style2\barra_nav.css">
-    <link rel="stylesheet" href="\PaanDaa\Base de datos\Conexion\image-conexion\style2\coment.css">
+    <link rel="stylesheet" href="\PaanDaa\Conexion\image-conexion\style2\barra_nav.css">
+    <link rel="stylesheet" href="\PaanDaa\Conexion\image-conexion\style2\coment.css">
     <title>Comentarios</title>
 </head>
 
@@ -27,8 +27,8 @@
                 <li><a href="#">Trabaja con nosotros</a></li>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="\PaanDaa\Acerca_de.html">Acerca de</a></li>
-                <li><a href="\PaanDaa\Base de datos\Conexion\formulario.php">Opinar</a></li>
-                <li><a href="C:\xampp\htdocs\PaanDaa\Base de datos\Conexion\Comentarios.php">Reseñas</a></li>
+                <li><a href="\PaanDaa\Conexion\formulario.php">Opinar</a></li>
+                <li><a href="\PaanDaa\Conexion\Comentarios.php">Reseñas</a></li>
             </ul>
         </nav>
     </div>
@@ -80,9 +80,7 @@
         </tr>
         <?php } ?>
     </table>
-    <center>
-        <button><a href="/proyecto_web/index.php">Synthmind_IV</a></button>
-    </center>
+    
 </body>
 
 </html>

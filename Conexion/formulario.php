@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="\PaanDaa\Base de datos\Conexion\image-conexion\style2\barra_nav.css">
-    <link rel="stylesheet" href="\PaanDaa\Base de datos\Conexion\image-conexion\style2\formulario.css">
+    <link rel="stylesheet" href="/PaanDaa/Conexion/image-conexion/style2/barra_nav.css">
+    <link rel="stylesheet" href="/PaanDaa/Conexion/image-conexion/style2/formulario.css">
     <title>Formulario</title>
     
 </head>
@@ -13,7 +13,7 @@
 <div class="barra-nav">
         <a href="\PaanDaa\Index.php" class="logo-link">
             <div class="logo-container">
-                <img src="\PaanDaa\Base de datos\Conexion\image-conexion\LOGO.jpg" alt="Logo">
+                <img src="\PaanDaa\Conexion\image-conexion\LOGO.jpg" alt="Logo">
                 <h1>PannDaa</h1>
                 <div class="eslogan">Dulzura suave, Tradicion fuerte</div>
             </div>
@@ -27,8 +27,8 @@
                 <li><a href="#">Trabaja con nosotros</a></li>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="\PaanDaa\Acerca_de.html">Acerca de</a></li>
-                <li><a href="\PaanDaa\Base de datos\Conexion\formulario.php">Opinar</a></li>
-                <li><a href="\PaanDaa\Base de datos\Conexion\Comentarios.php">Reseñas</a></li>
+                <li><a href="\PaanDaa\Conexion\formulario.php">Opinar</a></li>
+                <li><a href="\PaanDaa\Conexion\Comentarios.php">Reseñas</a></li>
             </ul>
         </nav>
     </div>

@@ -31,8 +31,8 @@
                 <li><a href="#">Trabaja con nosotros</a></li>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="Acerca_de.html">Acerca de</a></li>
-                <li><a href="Base de datos/Conexion/formulario.php">Opinar</a></li>
-                <li><a href="Base de datos/Conexion/Comentarios.php">Reseñas</a></li>
+                <li><a href="Conexion/formulario.php">Opinar</a></li>
+                <li><a href="Conexion/Comentarios.php">Reseñas</a></li>
             </ul>  
         </nav>
     </div>

@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios</title>
-    <link rel="icon" href="image-conexion/SYNTHMIND.ico">
-    <link rel="stylesheet" href="\proyecto_web\Conexion\image-conexion\style2\vercoment.css">
+    <link rel="stylesheet" href="Conexion/image-conexion/style2/vercoment.css">
 </head>
 <body>
     <table border="1px">

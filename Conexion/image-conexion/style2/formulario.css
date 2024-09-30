@@ -10,21 +10,23 @@ body {
 }
 
 #formulario {
-    background-color: transparent;
+    background-color: white;
     padding: 30px;
     border-radius: 10px;
-    width: 300px;
+    width: 400px;
+    align-items: center;
+    margin-top: 110px;
 }
 
 input[type="text"],
 input[type="number"],
 input[type="submit"] {
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -32,19 +34,19 @@ input[type="submit"] {
 input[type="text"]:focus,
 input[type="number"]:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px #09048b;
+    border-color: #fb4300;
+    box-shadow: 0 0 5px #fddd0c;
 }
 
 input[type="submit"] {
     background-color: transparent;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #000000;
+    background-color: #6aa1e3;
 }
 
 button {
@@ -64,7 +66,7 @@ button a {
 
 h1 {
     text-align: center;
-    color: transparent;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -79,9 +81,8 @@ label {
     font-family: Georgia;
     color: rgb(255, 255, 255);
 }
-
 body {
-    background-image: url("Base de datos/Conexion/image-conexion/formulario.jpg");
+    background-image: url("/PaanDaa/Conexion/image-conexion/formulario.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
