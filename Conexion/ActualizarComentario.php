@@ -27,16 +27,5 @@
             </tr>
             <?php } ?>
     </table>
-    <center>
-    <button>
-        <a href="/proyecto_web/index.php">Regresar </a>
-        </button>
-        <button>
-            <a href="Comentarios.php"> Comentarios</a>
-        </button>
-        <button>
-            <a href="formulario.php"> Opinar</a>
-        </button>
-    </center>
 </body>
 </html>

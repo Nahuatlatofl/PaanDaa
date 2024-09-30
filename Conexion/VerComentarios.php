@@ -16,8 +16,8 @@
                 <th>Edad</th>
                 <th>Fecha</th>
             </tr>
-        </thead>
-        <tbody>
+        </head>
+        <body>
             <?php
             include 'conexion.php';
             $selec = $con->query("SELECT * FROM 4bmpg");
@@ -30,7 +30,7 @@
                     <td data-label="Fecha"><?php echo $fila['fecha'] ?></td>
                 </tr>
                 <?php } ?>
-        </tbody>
+        </body>
     </table>
     
 </body>

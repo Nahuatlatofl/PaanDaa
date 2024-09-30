@@ -1,5 +1,14 @@
 /* Estilos base */
-
+body {
+    background-color: rgb(238, 0, 0);
+    color: white;
+    font-family: Arial, sans-serif; /* Fuente estándar para mejor legibilidad */
+}
+body{
+    background-image: url("/Conexion/image-conexion/Comentarios.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -59,14 +68,7 @@ button a {
     color: white;
 }
 
-body {
-    background-image: url("/proyecto_web/Conexion/image-conexion/VerComentarios.png");
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    font-family: Arial, sans-serif; /* Fuente estándar para mejor legibilidad */
-}
+
 
 /* Media Queries para la responsividad */
 @media (max-width: 768px) {
