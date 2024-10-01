@@ -39,7 +39,7 @@
                 <li><a href="#">Carrito</a></li>
                 <li><a href="#">Trabaja con nosotros</a></li>
                 <li><a href="#">Política de privacidad</a></li>
-                <li><a href="\PaanDaa\Acerca_de.html">Acerca de</a></li>
+                <li><a href="\PaanDaa\html\Acerca_De">Acerca de</a></li>
                 <li><a href="\PaanDaa\Conexion\formulario.php">Opinar</a></li>
                 <li><a href="\PaanDaa\Conexion\Comentarios.php">Reseñas</a></li>
             </ul>
