@@ -17,7 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Ejecutar la consulta
     if ($stmt->execute()) {
-        echo "Registro exitoso. ¡Bienvenido!";
+        header("Location: ../Index.html");
+        exit();
     } else {
         echo "Error al registrar: " . $stmt->error;
     }
