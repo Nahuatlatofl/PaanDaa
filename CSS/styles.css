@@ -1,0 +1,232 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --mainColor: #943434;
+    --pastelColorA: #fcf6ed;
+    --pastelColorB: #d7d1c9;
+    --pastelColorP: #f0abab;
+    --logoFont: "Concert One", sans-serif;
+    --textFont: "Montserrat", sans-serif;
+    --carrousel-max-height: 60rem;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(var(--pastelColorB), var(--pastelColorA));
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: var(--textFont);
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: var(--mainColor);
+}
+
+header .logo {
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2.4rem;
+    letter-spacing: 0.2rem;
+    font-family: var(--logoFont);
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 2rem;
+}
+
+header ul li:first-of-type {
+    margin-left: 0;
+}
+
+header ul li a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 0.6rem 1.5rem;
+    color: var(--white);
+    border-radius: 2rem;
+}
+
+header ul li a.register {
+    border-radius: 0;
+    border: 1px solid var(--white);
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background-color: var(--white);
+    color: var(--mainColor);
+}
+
+.carousel {
+    width: 100%;
+    max-height: var(--carrousel-max-height);
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    max-height: var(--carrousel-max-height);
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.carousel-inner div {
+    flex: 0 0 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: var(--carrousel-max-height);
+    filter: brightness(35%);
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--white);
+    font-size: 3.2rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+    width: calc(100% - 4rem);
+    transform: translate(-50%, -50%);
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control-left,
+.control-right {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--mainColor);
+    color: var(--white);
+}
+
+footer .logo {
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2.4rem;
+    letter-spacing: 0.2rem;
+    font-family: var(--logoFont);
+}
+
+.footerFields{
+    display: flex;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+}
+.title-list{
+    margin-bottom: 2rem;
+}
+
+footer ul {
+    display: flex;
+    align-items: start;
+}
+
+footer ul li a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 0.6rem 1.5rem;
+    color: var(--white);
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem; 
+}
+
+footer .social-icons:first-of-type {
+    margin-left: 0rem; 
+}
+
+footer .social-icons a {
+    color: var(--white); 
+    font-size: 2.4rem; 
+    margin-left: 1rem; 
+    text-decoration: none; 
+}
+
+footer .social-icons a:hover {
+    color: var(--pastelColorP); 
+}
+
+.map-container {
+    text-align: start; 
+    width: 50rem;
+}
+
+.map-container iframe {
+    max-width: 100%; 
+    height: 30rem; 
+}
