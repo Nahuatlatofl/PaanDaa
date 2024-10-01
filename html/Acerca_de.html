@@ -4,67 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo/index.css">
-    <link rel="stylesheet" href="estilo/barra_nav.css">
-    <link rel="stylesheet" href="estilo/carrusel.css">
-    <link rel="stylesheet" href="estilo/contenido.css">
-    <link rel="stylesheet" href="estilo/pie.css">
-    <script src="https://kit.fontawesome.com/55d55a560c.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="CSS/favicon/favicon.ico" type="image/x-icon">
     <title>PaanDaa</title>
 </head>
 
 <body>
-    <div class="barra-nav">
-        <a href="index.php" class="logo-link">
-            <div class="logo-container">
-                <img src="estilo/imagen/LOGO.jpg" alt="Logo">
-                <h1>PannDaa</h1>
-                <div class="eslogan">Dulzura suave, Tradicion fuerte</div>
+    <header>
+        <h1>
+            <a href="#" class="logo">PaaDaa</a>
+        </h1>
+        <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="Conexion/formulario.php">Opinar</a></li>
+            <li><a href="Conexion/Comentarios.php">Reseñas</a></li>
+        </ul>
+        <ul>
+            <li><a href="#" id="login" class="register">Log In</a></li>
+            <li><a href="#" id="login" class="register">Sign In</a></li>
+        </ul>
+    </header>
+    <footer>
+        <div class="list">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.533499223841!2d-98.24644318930703!3d19.302642744743295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfd969b30c6a3d%3A0x3c5091eed9635c7b!2sCentro%20de%20Bachillerato%20Tecnol%C3%B3gico%20Industrial%20y%20de%20Servicios%20No.%203!5e0!3m2!1ses!2smx!4v1727738857468!5m2!1ses!2smx"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-        </a>
-        <div class="busqueda-container">
-            <input type="text" placeholder="Buscar...">
+            <p>Centro de Bachillerato Tecnológico Industrial y de Servicios No. 3</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Carrito</a></li>
-                <li><a href="#">Trabaja con nosotros</a></li>
-                <li><a href="#">Política de privacidad</a></li>
-                <li><a href="Acerca_de.html">Acerca de</a></li>
-                <li><a href="Conexion/formulario.php">Opinar</a></li>
-                <li><a href="Conexion/Comentarios.php">Reseñas</a></li>
-            </ul>
-        </nav>
-    </div>
-    </body>
-    <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="box">
-                <figure>
-                    <a href="#">
-                        <img src="estilo/imagen/LOGO.jpg" alt="Logo error">
-                    </a>
-                </figure>
+        <ul class="list">
+            <h2 class="title-list">PÁGINAS</h2>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <ul class="list">
+            <h2 class="title-list">LEGALES</h2>
+            <li><a href="#">Aviso Legal</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+        </ul>
+        <div class="list">
+            <h2 class="title-list">SÍGUENOS</h2>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>"Un nuevo gusto al paladar"
-                </p>
-
-            </div>
-            <div class="box">
-                <h2>SIGUENOS</h2>
-                <div class="red-social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                </div>
-            </div>
-        </div>
-        <div class="grupo-2">
-            <small>&copy; 2024 <b>PaanDaa</b>&reg; - Todos los Derechos Reservados.</small>
         </div>
     </footer>
 </body>
