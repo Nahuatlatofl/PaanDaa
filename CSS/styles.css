@@ -254,6 +254,11 @@ footer .social-icons a:hover {
     font-weight: bold;
 }
 
+.form-title{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 .form-input {
     padding: 1rem;
     margin-bottom: 1.6rem;
