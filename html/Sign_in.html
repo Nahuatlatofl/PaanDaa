@@ -32,15 +32,22 @@
         </ul>
     </header>
     <div class="form-container">
-        <form action="login.php" method="POST" class="login-form">
-            <h2 class="form-title">Formulario de acceso</h2>
-            <label for="username" class="form-label">Usuario o Email:</label>
+        <form action="register.php" method="POST" class="login-form">
+            <h2 class="form-title">Formulario de Registro</h2>
+            
+            <label for="username" class="form-label">Nombre de Usuario:</label>
             <input type="text" name="username" id="username" class="form-input" required>
-
+            
             <label for="password" class="form-label">Contraseña:</label>
             <input type="password" name="password" id="password" class="form-input" required>
-
-            <input type="submit" value="Iniciar Sesión" class="submit-btn">
+            
+            <label for="email" class="form-label">Correo Electrónico:</label>
+            <input type="email" name="email" id="email" class="form-input" required>
+            
+            <label for="nombre_completo" class="form-label">Nombre Completo:</label>
+            <input type="text" name="nombre_completo" id="nombre_completo" class="form-input" required>
+            
+            <input type="submit" value="Registrar" class="submit-btn">
         </form>
     </div>
 </body>
