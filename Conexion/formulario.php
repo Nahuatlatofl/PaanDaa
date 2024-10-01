@@ -24,7 +24,7 @@
 
 <body>
 <div class="barra-nav">
-        <a href="\PaanDaa\Index.php" class="logo-link">
+        <a href="\PaanDaa\Index.html" class="logo-link">
             <div class="logo-container">
                 <img src="\PaanDaa\Conexion\image-conexion\LOGO.jpg" alt="Logo">
                 <h1>PannDaa</h1>

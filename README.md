@@ -10,6 +10,7 @@ El repositorio del Proyecto
  + 📘 Modificación del CSS.
  + 📙 Modificación de JAVASCRIPT.
  + 📗 Modificación del HTML.
+ + 📓 Modificación del PHP
  + 📜 Nuevo Archivo.
 
 #### Usar los siguientes estilos
