@@ -12,6 +12,7 @@ El repositorio del Proyecto
  + 📗 Modificación del HTML.
  + 📓 Modificación del PHP
  + 📜 Nuevo Archivo.
+ + 🗂️ Nueva Carpeta
 
 #### Usar los siguientes estilos
 ##### Flujos de control
