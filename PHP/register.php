@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['user_id'] = $user_id; 
         $_SESSION['username'] = $username; 
         $_SESSION['rol'] = 'usuario';
-        
         echo json_encode(array(
             'userId' => $_SESSION['user_id'],
             'username' => $_SESSION['username'],
