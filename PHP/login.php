@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['username'] = $fila['username'];
             $_SESSION['rol'] = $fila['rol'];
             // Redirigir al panel de control o página principal
-            header("Location: dashboard.php");
+            header("Location: ../Index.html");
         } else {
             echo "Contraseña incorrecta.";
         }
