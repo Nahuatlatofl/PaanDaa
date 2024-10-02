@@ -19,8 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['user_id'] = $user_id; 
         $_SESSION['username'] = $username; 
         $_SESSION['rol'] = 'usuario';
-
-        header("Location: ../Index.html");
+        
+        echo json_encode(array(
+            'userId' => $_SESSION['user_id'],
+            'username' => $_SESSION['username'],
+            'rol' => $_SESSION['rol']
+        ));
         exit();
     } else {
         echo "Error al registrar: " . $stmt->error;
@@ -31,6 +35,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<script>
-    var isLoggedIn = <?php echo isset($_SESSION['username']) ? 'true' : 'false'; ?>;
-</script>
