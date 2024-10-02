@@ -1,5 +1,5 @@
 <?php
 
-$con = mysqli_connect("localhost","root","","Guardar"); 
+$con = mysqli_connect("localhost","root","","Panaderia"); 
 
 ?>
