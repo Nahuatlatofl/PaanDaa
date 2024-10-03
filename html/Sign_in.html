@@ -26,13 +26,23 @@
             <li><a href="../Conexion/formulario.php">Opinar</a></li>
             <li><a href="../Conexion/Comentarios.php">Reseñas</a></li>
         </ul>
-        <ul>
-            <li><a href="Log_in.html" id="login" class="register">Log In</a></li>
-            <li><a href="Sign_in.html" id="login" class="register">Sign In</a></li>
+        <ul id="register-field">
+            <li><a href="Log_in.html" class="register">Log In</a></li>
+            <li><a href="Sign_in.html" class="register">Sign In</a></li>
         </ul>
+        <div class="footer disabled" style="color: white;" id="user-field">
+            <ul>
+                <li>
+                    <a href="#" aria-label="Usuario">
+                        <i class="fas fa-user"></i>
+                    </a>    
+                    <h3 id="username">Usuario</h3>                
+                </li>
+            </ul>
+        </div>        
     </header>
     <div class="form-container">
-        <form action="../PHP/register.php" method="POST" class="login-form">
+        <form action="../PHP/register.php" method="POST" class="login-form" id="register-form">
             <h2 class="form-title">Formulario de Registro</h2>
             
             <label for="username" class="form-label">Nombre de Usuario:</label>
@@ -51,4 +61,5 @@
         </form>
     </div>
 </body>
+<script src="../JS/sesiones.js"></script>
 </html>

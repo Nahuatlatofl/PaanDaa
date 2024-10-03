@@ -26,10 +26,20 @@
             <li><a href="Conexion/formulario.php">Opinar</a></li>
             <li><a href="Conexion/Comentarios.php">Reseñas</a></li>
         </ul>
-        <ul>
+        <ul id="register-field">
             <li><a href="html/Log_in.html" id="login" class="register">Log In</a></li>
             <li><a href="html/Sign_in.html" id="login" class="register">Sign In</a></li>
         </ul>
+        <div class="footer disabled" style="color: white;" id="user-field">
+            <ul>
+                <li>
+                    <a href="#" aria-label="Usuario">
+                        <i class="fas fa-user"></i>
+                    </a>    
+                    <h3 id="username">Usuario</h3>                
+                </li>
+            </ul>
+        </div>
     </header>
     
     <section class="carousel">
@@ -59,7 +69,7 @@
         </div>
     </section>
   
-    <footer>
+    <footer class="footer">
         <div class="list">
             <div class="map-container">
                 <iframe
@@ -101,5 +111,4 @@
     </footer>
 </body>
 <script src="JS/carrousel.js"></script>
-<script src="JS/sesiones.js"></script>
 </html>
