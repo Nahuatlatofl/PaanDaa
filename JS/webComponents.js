@@ -6,19 +6,19 @@ class CustomNavbar extends HTMLElement {
         const header = document.createElement('header');
         header.innerHTML = `
             <h1>
-                <a href="Index.html" class="logo">PaaDaa</a>
+                <a href="http://localhost/PaanDaa/Index.html" class="logo">PaaDaa</a>
             </h1>
             <ul>
-                <li><a href="Index.html" class="active">Inicio</a></li>
-                <li><a href="html/Acerca_De.html">Acerca de</a></li>
+                <li><a href="http://localhost/PaanDaa/Index.html" class="active">Inicio</a></li>
+                <li><a href="http://localhost/PaanDaa/html/Acerca_de.html">Acerca de</a></li>
                 <li><a href="#">Productos</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="Conexion/formulario.php">Opinar</a></li>
                 <li><a href="Conexion/Comentarios.php">Reseñas</a></li>
             </ul>
             <ul id="register-field">
-                <li><a href="html/Log_in.html" id="login" class="register">Log In</a></li>
-                <li><a href="html/Sign_in.html" id="login" class="register">Sign In</a></li>
+                <li><a href="http://localhost/PaanDaa/html/Log_in.html" id="login" class="register">Log In</a></li>
+                <li><a href="http://localhost/PaanDaa/html/Sign_in.html" id="login" class="register">Sign In</a></li>
             </ul>
             <div class="footer disabled" style="color: white;" id="user-field">
                 <ul>
@@ -62,15 +62,15 @@ class CustomFooter extends HTMLElement {
                     </div>
                     <ul class="list">
                         <h2 class="title-list">PÁGINAS</h2>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="http://localhost/PaanDaa/Index.html">Inicio</a></li>
+                        <li><a href="http://localhost/PaanDaa/html/Acerca_de.html">Acerca de</a></li>
                         <li><a href="#">Productos</a></li>
                         <li><a href="#">Contacto</a></li>
                     </ul>
                     <ul class="list">
                         <h2 class="title-list">LEGALES</h2>
                         <li><a href="#">Aviso Legal</a></li>
-                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="http://localhost/PaanDaa/html/Politica.html">Términos y Condiciones</a></li>
                     </ul>
                     <div class="list">
                         <h2 class="title-list">SÍGUENOS</h2>

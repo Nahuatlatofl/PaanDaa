@@ -11,36 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="../CSS/favicon/favicon.ico" type="image/x-icon">
+    <script src="http://localhost/PaanDaa/JS/webComponents.js"></script>
     <title>PaanDaa</title>
 </head>
 <body> 
-    <header>
-        <h1>
-            <a href="../Index.html" class="logo">PaaDaa</a>
-        </h1>
-        <ul>
-            <li><a href="../Index.html">Inicio</a></li>
-            <li><a href="Acerca_De.html">Acerca de</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="../Conexion/formulario.php">Opinar</a></li>
-            <li><a href="../Conexion/Comentarios.php">Reseñas</a></li>
-        </ul>
-        <ul id="register-field">
-            <li><a href="Log_in.html" class="register">Log In</a></li>
-            <li><a href="Sign_in.html" class="register">Sign In</a></li>
-        </ul>
-        <div class="footer disabled" style="color: white;" id="user-field">
-            <ul>
-                <li>
-                    <a href="#" aria-label="Usuario">
-                        <i class="fas fa-user"></i>
-                    </a>    
-                    <h3 id="username">Usuario</h3>                
-                </li>
-            </ul>
-        </div>        
-    </header>
+    <custom-navbar></custom-navbar>
+
     <div class="form-container">
         <form action="../PHP/register.php" method="POST" class="login-form" id="register-form">
             <h2 class="form-title">Formulario de Registro</h2>
