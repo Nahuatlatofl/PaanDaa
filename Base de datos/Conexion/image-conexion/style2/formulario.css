@@ -81,7 +81,7 @@ label {
 }
 
 body {
-    background-image: url("/proyecto_web/Conexion/image-conexion/formulario2.png");
+    background-image: url("Base de datos/Conexion/image-conexion/formulario2.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
