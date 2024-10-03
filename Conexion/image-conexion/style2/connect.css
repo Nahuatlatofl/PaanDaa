@@ -1,0 +1,16 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: rgb(0, 0, 0); 
+        }
+
+        .confirmation {
+            text-align: center;
+        }
