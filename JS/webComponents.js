@@ -9,12 +9,12 @@ class CustomNavbar extends HTMLElement {
                 <a href="http://localhost/PaanDaa/Index.html" class="logo">PaaDaa</a>
             </h1>
             <ul>
-                <li><a href="http://localhost/PaanDaa/Index.html" class="active">Inicio</a></li>
-                <li><a href="http://localhost/PaanDaa/html/Acerca_de.html">Acerca de</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="Conexion/formulario.php">Opinar</a></li>
-                <li><a href="Conexion/Comentarios.php">Reseñas</a></li>
+                <li><a href="http://localhost/PaanDaa/Index.html" class="nav-link">Inicio</a></li>
+                <li><a href="http://localhost/PaanDaa/html/Acerca_de.html" class="nav-link">Acerca de</a></li>
+                <li><a href="#" class="nav-link">Productos</a></li>
+                <li><a href="#" class="nav-link">Contacto</a></li>
+                <li><a href="Conexion/formulario.php" class="nav-link">Opinar</a></li>
+                <li><a href="Conexion/Comentarios.php" class="nav-link">Reseñas</a></li>
             </ul>
             <ul id="register-field">
                 <li><a href="http://localhost/PaanDaa/html/Log_in.html" id="login" class="register">Log In</a></li>
@@ -32,6 +32,7 @@ class CustomNavbar extends HTMLElement {
         shadow.appendChild(linkElement);
         shadow.appendChild(header);
 
+        this.updateActiveLink();
     }
 
     getRegisterField() {
@@ -44,6 +45,21 @@ class CustomNavbar extends HTMLElement {
 
     getUsernameElement() {
         return this.shadowRoot.getElementById('username');
+    }
+    
+    updateActiveLink() {
+        const links = this.shadowRoot.querySelectorAll('.nav-link');
+        const currentPath = window.location.pathname.split('/').pop(); 
+        console.log(currentPath);
+        links.forEach(link => {
+            const linkPath = link.getAttribute('href').split('/').pop(); 
+            console.log(linkPath);
+            if (currentPath === linkPath) {
+                link.classList.add('active'); 
+            } else {
+                link.classList.remove('active'); 
+            }
+        });
     }
 }
 
