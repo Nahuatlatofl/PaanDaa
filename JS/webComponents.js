@@ -21,14 +21,7 @@ class CustomNavbar extends HTMLElement {
                 <li><a href="http://localhost/PaanDaa/html/Sign_in.html" id="login" class="register">Sign In</a></li>
             </ul>
             <div class="footer disabled" style="color: white;" id="user-field">
-                <ul>
-                    <li>
-                        <a href="#" aria-label="Usuario">
-                            <i class="fas fa-user"></i>
-                        </a>    
-                        <h3 id="username">Usuario</h3>                
-                    </li>
-                </ul>
+                <h3 id="username">Usuario</h3>                
             </div>
         `;
 
@@ -38,6 +31,19 @@ class CustomNavbar extends HTMLElement {
 
         shadow.appendChild(linkElement);
         shadow.appendChild(header);
+
+    }
+
+    getRegisterField() {
+        return this.shadowRoot.getElementById('register-field');
+    }
+
+    getUserField() {
+        return this.shadowRoot.getElementById('user-field');
+    }
+
+    getUsernameElement() {
+        return this.shadowRoot.getElementById('username');
     }
 }
 
