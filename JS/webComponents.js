@@ -1,8 +1,16 @@
 class CustomNavbar extends HTMLElement {
     constructor() {
         super();
+        this.attachShadow({ mode: 'open' });
+    }
+    
+    connectedCallback() {
+        this.render();
+        this.updateActiveLink();
+        this.checkUserSession();
+    }
 
-        let shadow = this.attachShadow({ mode: 'open' });
+    render() {
         const header = document.createElement('header');
         header.innerHTML = `
             <h1>
@@ -17,53 +25,91 @@ class CustomNavbar extends HTMLElement {
                 <li><a href="Conexion/Comentarios.php" class="nav-link">Reseñas</a></li>
             </ul>
             <ul id="register-field">
-                <li><a href="http://localhost/PaanDaa/html/Log_in.html" id="login" class="register">Log In</a></li>
-                <li><a href="http://localhost/PaanDaa/html/Sign_in.html" id="login" class="register">Sign In</a></li>
+                <li><a href="http://localhost/PaanDaa/html/Log_in.html" class="register">Log In</a></li>
+                <li><a href="http://localhost/PaanDaa/html/Sign_in.html" class="register">Sign In</a></li>
             </ul>
-            <div class="footer disabled" style="color: white;" id="user-field">
+            <div class="footer" style="color: white;" id="user-field">
                 <h3 id="username">Usuario</h3>                
+                <button id="logout">Logout</button>
             </div>
         `;
 
+        // Agregar la hoja de estilos
         const linkElement = document.createElement('link');
         linkElement.setAttribute('rel', 'stylesheet');
         linkElement.setAttribute('href', 'http://localhost/PaanDaa/CSS/styles.css');
 
-        shadow.appendChild(linkElement);
-        shadow.appendChild(header);
+        // Asegúrate de usar this.shadowRoot
+        this.shadowRoot.appendChild(linkElement);  
+        this.shadowRoot.appendChild(header);
 
-        this.updateActiveLink();
+        // Oculta el campo de usuario inicialmente
+        this.shadowRoot.getElementById('user-field').style.display = 'none';
+        
+        // Agregar el event listener para el botón de logout
+        const logoutButton = this.shadowRoot.getElementById('logout');
+        if (logoutButton) {
+            logoutButton.addEventListener('click', () => {
+                this.logout();
+            });
+        }
     }
 
-    getRegisterField() {
-        return this.shadowRoot.getElementById('register-field');
+    async checkUserSession() {
+        try {
+            const response = await fetch('http://localhost/PaanDaa/PHP/login.php'); 
+            const data = await response.json();
+
+            if (data.loggedIn) {
+                this.showUserInfo(data.username);
+            } else {
+                this.showLoginRegister();
+            }
+        } catch (error) {
+            console.error('Error al comprobar la sesión:', error);
+        }
     }
 
-    getUserField() {
-        return this.shadowRoot.getElementById('user-field');
+    showUserInfo(username) {
+        const userField = this.shadowRoot.getElementById('user-field');
+        userField.style.display = 'block';  
+        userField.querySelector('#username').innerText = username; 
+        this.shadowRoot.getElementById('register-field').style.display = 'none';  
     }
 
-    getUsernameElement() {
-        return this.shadowRoot.getElementById('username');
+    showLoginRegister() {
+        this.shadowRoot.getElementById('register-field').style.display = 'block'; 
+        const userField = this.shadowRoot.getElementById('user-field');
+        userField.style.display = 'none';  
     }
-    
+
     updateActiveLink() {
         const links = this.shadowRoot.querySelectorAll('.nav-link');
-        const currentPath = window.location.pathname.split('/').pop(); 
-        console.log(currentPath);
+        const currentPath = window.location.pathname.split('/').pop();
         links.forEach(link => {
-            const linkPath = link.getAttribute('href').split('/').pop(); 
-            console.log(linkPath);
+            const linkPath = link.getAttribute('href').split('/').pop();
             if (currentPath === linkPath) {
-                link.classList.add('active'); 
+                link.classList.add('active');
             } else {
-                link.classList.remove('active'); 
+                link.classList.remove('active');
             }
         });
     }
+
+    logout() {
+
+        fetch('http://localhost/PaanDaa/PHP/logout.php')
+            .then(response => {
+                window.location.reload(); 
+            })
+            .catch(error => {
+                console.error('Error al cerrar sesión:', error);
+            });
+    }
 }
 
-customElements.define("custom-navbar", CustomNavbar);
+// Define el nuevo elemento
+customElements.define('custom-navbar', CustomNavbar);
 
 class CustomFooter extends HTMLElement {
     constructor() {
