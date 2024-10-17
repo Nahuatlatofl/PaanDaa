@@ -1,5 +1,5 @@
 class CustomNavbar extends HTMLElement {
-    constructor() {
+    constructor() { 
         super();
         this.attachShadow({ mode: 'open' });
     }
@@ -23,7 +23,7 @@ class CustomNavbar extends HTMLElement {
                 <li><a href="#" class="nav-link">Contacto</a></li>
                 <li><a href="Conexion/formulario.php" class="nav-link">Opinar</a></li>
                 <li><a href="Conexion/Comentarios.php" class="nav-link">Reseñas</a></li>
-            </ul>
+            </ul> 
             <ul id="register-field">
                 <li><a href="http://localhost/PaanDaa/html/Log_in.html" class="register">Log In</a></li>
                 <li><a href="http://localhost/PaanDaa/html/Sign_in.html" class="register">Sign In</a></li>
@@ -34,25 +34,14 @@ class CustomNavbar extends HTMLElement {
             </div>
         `;
 
-        // Agregar la hoja de estilos
         const linkElement = document.createElement('link');
         linkElement.setAttribute('rel', 'stylesheet');
         linkElement.setAttribute('href', 'http://localhost/PaanDaa/CSS/styles.css');
 
-        // Asegúrate de usar this.shadowRoot
         this.shadowRoot.appendChild(linkElement);  
         this.shadowRoot.appendChild(header);
 
-        // Oculta el campo de usuario inicialmente
         this.shadowRoot.getElementById('user-field').style.display = 'none';
-        
-        // Agregar el event listener para el botón de logout
-        const logoutButton = this.shadowRoot.getElementById('logout');
-        if (logoutButton) {
-            logoutButton.addEventListener('click', () => {
-                this.logout();
-            });
-        }
     }
 
     async checkUserSession() {
@@ -71,7 +60,7 @@ class CustomNavbar extends HTMLElement {
     }
 
     showUserInfo(username) {
-        const userField = this.shadowRoot.getElementById('user-field');
+        const userField = this.shadowRoot.getElementById('user-field'); 
         userField.style.display = 'block';  
         userField.querySelector('#username').innerText = username; 
         this.shadowRoot.getElementById('register-field').style.display = 'none';  
@@ -96,16 +85,6 @@ class CustomNavbar extends HTMLElement {
         });
     }
 
-    logout() {
-
-        fetch('http://localhost/PaanDaa/PHP/logout.php')
-            .then(response => {
-                window.location.reload(); 
-            })
-            .catch(error => {
-                console.error('Error al cerrar sesión:', error);
-            });
-    }
 }
 
 // Define el nuevo elemento

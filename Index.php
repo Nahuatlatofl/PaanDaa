@@ -1,6 +1,13 @@
+<?php
+require 'config/database.php';
+$db = new Database();
+$con = $db->conectar();
+$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +50,40 @@
             <span class="control-right" onclick="nextSlide()">&#10095;</span>
         </div>
     </section>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <?php
+             foreach($resultado as $row){
+            ?>
+             <div class="col">
+                <div class="card shadow-sm">
+                    <?php
+                    $id = $row['id'];
+                    $imagen= "img/productos/".$id."/pan.jpeg";
+
+                    if (!file_exists($imagen))
+                    {
+                        $imagen="img/error.jpeg";
+                    }
+
+                    ?>
+                    <img src="<?php echo $imagen; ?>" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
+                        <p class="card-text"><?php echo $row['precio']; ?></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-primary">Detalles</a>
+                            </div>
+                            <a href="#" class="btn btn-success">Agregar</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            <?php
+            }
+            ?> 
   
     <custom-footer></custom-footer>
     
