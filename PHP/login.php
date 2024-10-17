@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         $stmt->execute();
         $result = $stmt->get_result();
-
+        
         if ($result->num_rows === 1) {
             $fila = $result->fetch_assoc();
 
