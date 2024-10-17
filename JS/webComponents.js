@@ -19,7 +19,7 @@ class CustomNavbar extends HTMLElement {
             <ul>
                 <li><a href="http://localhost/PaanDaa/Index.html" class="nav-link">Inicio</a></li>
                 <li><a href="http://localhost/PaanDaa/html/Acerca_de.html" class="nav-link">Acerca de</a></li>
-                <li><a href="#" class="nav-link">Productos</a></li>
+                <li><a href="http://localhost/PaanDaa/html/Politica.html" class="nav-link">Politica</a></li>
                 <li><a href="#" class="nav-link">Contacto</a></li>
                 <li><a href="Conexion/formulario.php" class="nav-link">Opinar</a></li>
                 <li><a href="Conexion/Comentarios.php" class="nav-link">Reseñas</a></li>
