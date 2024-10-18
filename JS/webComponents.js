@@ -26,8 +26,7 @@ class CustomNavbar extends HTMLElement {
                 <li><a href="/PaanDaa/Conexion/Comentarios.php" class="nav-link">Reseñas</a></li>
             </ul> 
             <ul id="register-field">
-                <li><a href="/PaanDaa/html/Log_in.html" class="register">Log In</a></li>
-                <li><a href="/PaanDaa/html/Sign_in.html" class="register">Sign In</a></li>
+                <li><a href="/PaanDaa/html/Log_in.html" class="register">Log In</a> <a href="/PaanDaa/html/Sign_in.html" class="register">Sign In</a></li>
             </ul>
             <div class="footer" style="color: white;" id="user-field">
                 <h3 id="username">Usuario</h3>                
