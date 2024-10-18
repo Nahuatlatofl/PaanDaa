@@ -1,0 +1,69 @@
+
+
+/* Estilos del contenedor del formulario */
+.form-container {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 40px 30px; /* Espaciado interno */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del formulario */
+}
+
+/* Estilo del título del formulario */
+.form-title {
+    font-family: 'Concert One', cursive; /* Fuente personalizada */
+    font-size: 24px;
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos de las etiquetas del formulario */
+.form-label {
+    font-size: 14px;
+    color: #555; /* Color del texto */
+    margin-bottom: 5px; /* Espacio inferior */
+    display: block; /* Mostrar como bloque para que ocupe toda la línea */
+}
+
+/* Estilos de los campos de entrada */
+.form-input {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio inferior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px;
+}
+
+/* Estilos del botón de envío */
+.submit-btn {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px;
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px;
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.submit-btn:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilos para manejar errores o mensajes de éxito (opcional) */
+.error-message {
+    color: red; /* Color rojo para mensajes de error */
+    margin-top: 10px; /* Espacio superior */
+    text-align: center; /* Centrar el texto */
+}
+
+.success-message {
+    color: green; /* Color verde para mensajes de éxito */
+    margin-top: 10px; /* Espacio superior */
+    text-align: center; /* Centrar el texto */
+}
