@@ -12,6 +12,7 @@
     <link rel="icon" href="../CSS/favicon/favicon.ico" type="image/x-icon">
     <script src="http://localhost/PaanDaa/JS/webComponents.js"></script>
     <title>Política de Privacidad</title>
+    <script src="JS/sesiones.js"></script>
     <style>
         body {
             margin-top: 50px;

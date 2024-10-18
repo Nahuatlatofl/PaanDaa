@@ -17,6 +17,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <link rel="icon" href="CSS/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="JS/webComponents.js"></script>
+    <script src="JS/sesiones.js"></script>
     <title>PaanDaa</title>
 </head>
 

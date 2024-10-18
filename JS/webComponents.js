@@ -1,13 +1,13 @@
 class CustomNavbar extends HTMLElement {
-    constructor() { 
+    constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
-    
+
     connectedCallback() {
         this.render();
+        this.setupEventListeners();
         this.updateActiveLink();
-        this.checkUserSession();
     }
 
     render() {
@@ -19,14 +19,14 @@ class CustomNavbar extends HTMLElement {
             <ul>
                 <li><a href="/PaanDaa/Index.php" class="nav-link">Inicio</a></li>
                 <li><a href="/PaanDaa/productos.php" class="nav-link">Productos</a></li>
-                <li><a href="/PaanDaa/Acerca_de.html" class="nav-link">Acerca de</a></li>
-                <li><a href="/PaanDaa/html/Politica.html" class="nav-link">Politica</a></li>
+                <li><a href="/PaanDaa/Acerca_de.php" class="nav-link">Acerca de</a></li>
+                <li><a href="/PaanDaa/html/Politica.php" class="nav-link">Politica</a></li>
                 <li><a href="#" class="nav-link">Contacto</a></li>
                 <li><a href="/PaanDaa/Conexion/formulario.php" class="nav-link">Opinar</a></li>
                 <li><a href="/PaanDaa/Conexion/Comentarios.php" class="nav-link">Reseñas</a></li>
             </ul> 
             <ul id="register-field">
-                <li><a href="/PaanDaa/html/Sign_in.html" class="register">Log In</a> <a href="/PaanDaa/html/Sign_in.html" class="register">Sign In</a></li>
+                <li><a href="/PaanDaa/html/Sign_in.php" class="register">Log In</a> <a href="/PaanDaa/html/Sign_in.php" class="register">Sign In</a></li>
             </ul>
             <div class="footer" style="color: white;" id="user-field">
                 <h3 id="username">Usuario</h3>                
@@ -38,38 +38,10 @@ class CustomNavbar extends HTMLElement {
         linkElement.setAttribute('rel', 'stylesheet');
         linkElement.setAttribute('href', '/PaanDaa/CSS/styles.css');
 
-        this.shadowRoot.appendChild(linkElement);  
+        this.shadowRoot.appendChild(linkElement);
         this.shadowRoot.appendChild(header);
 
         this.shadowRoot.getElementById('user-field').style.display = 'none';
-    }
-
-    async checkUserSession() {
-        try {
-            const response = await fetch('/PaanDaa/PHP/login.php'); 
-            const data = await response.json();
-
-            if (data.loggedIn) {
-                this.showUserInfo(data.username);
-            } else {
-                this.showLoginRegister();
-            }
-        } catch (error) {
-            console.error('Error al comprobar la sesión:', error);
-        }
-    }
-
-    showUserInfo(username) {
-        const userField = this.shadowRoot.getElementById('user-field'); 
-        userField.style.display = 'block';  
-        userField.querySelector('#username').innerText = username; 
-        this.shadowRoot.getElementById('register-field').style.display = 'none';  
-    }
-
-    showLoginRegister() {
-        this.shadowRoot.getElementById('register-field').style.display = 'block'; 
-        const userField = this.shadowRoot.getElementById('user-field');
-        userField.style.display = 'none';  
     }
 
     updateActiveLink() {
@@ -83,6 +55,83 @@ class CustomNavbar extends HTMLElement {
                 link.classList.remove('active');
             }
         });
+    }
+
+    setupEventListeners() {
+        const registerButton = this.shadowRoot.querySelector('.register');
+        const loginButton = this.shadowRoot.querySelector('.register');
+
+        registerButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = '/PaanDaa/html/Sign_in.php';
+        });
+
+        loginButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = '/PaanDaa/html/Log_in.php'
+        });
+
+        const logoutButton = this.shadowRoot.getElementById('logout');
+        logoutButton.addEventListener('click', () => {
+            this.logout();
+        });
+    }
+
+    setUsername(username) {
+        this.username = username;
+        this.showUserField();
+    }
+
+    showUserField() {
+        this.shadowRoot.getElementById('user-field').style.display = 'block';
+        this.shadowRoot.getElementById('register-field').style.display = 'none';
+        this.shadowRoot.getElementById('username').textContent = this.username;
+    }
+
+    logout() {
+        fetch('/PaanDaa/PHP/logout.php')
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = '/PaanDaa/Index.php';
+                } else {
+                    console.error('Error al cerrar sesión');
+                    alert('Error al cerrar sesión. Por favor, intenta nuevamente.');
+                }
+            })
+            .catch(error => {
+                console.error('Error de conexión:', error);
+                alert('Error de conexión. Por favor, intenta nuevamente.');
+            });
+    }
+
+    updateUsername() {
+        const username = this.getUsernameFromSession();
+        if (username) {
+            this.shadowRoot.getElementById('username').textContent = username;
+            this.shadowRoot.getElementById('user-field').style.display = 'block';
+            this.shadowRoot.getElementById('register-field').style.display = 'none';
+        }
+    }
+
+    async getUsernameFromSession() {
+        try {
+            const response = await fetch('/PaanDaa/Conexion/register.php');
+            if (!response.ok) {
+                throw new Error('Error al obtener el nombre de usuario');
+            }
+
+            const jsonData = await response.json();
+            const username = jsonData.username;
+
+            if (username) {
+                this.shadowRoot.getElementById('username').textContent = username;
+                this.shadowRoot.getElementById('user-field').style.display = 'block';
+                this.shadowRoot.getElementById('register-field').style.display = 'none';
+            }
+        } catch (error) {
+            console.error('Error al obtener el nombre de usuario:', error);
+        }
+        return '<?php echo $_SESSION["username"] ?? ""; ?>';
     }
 
 }

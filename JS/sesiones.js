@@ -32,18 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             return;
                         }
 
-                        const registerField = navbar.getRegisterField();
-                        const userField = navbar.getUserField();
-                        const usernameElement = navbar.getUsernameElement();
-
-                        if (!registerField || !userField || !usernameElement) {
-                            console.error('Uno de los elementos no se encontró');
-                            return;
-                        }
-
-                        usernameElement.innerText = jsonData.username;
-                        userField.classList.remove('disabled');
-                        registerField.classList.add('disabled');
+                        navbar.setUsername(jsonData.username);
 
                     } catch (error) {
                         console.error('Error al parsear JSON:', error);
@@ -90,18 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             return;
                         }
 
-                        const registerField = navbar.getRegisterField();
-                        const userField = navbar.getUserField();
-                        const usernameElement = navbar.getUsernameElement();
-
-                        if (!registerField || !userField || !usernameElement) {
-                            console.error('Uno de los elementos no se encontró');
-                            return;
-                        }
-
-                        usernameElement.innerText = jsonData.username;
-                        userField.classList.remove('disabled');
-                        registerField.classList.add('disabled');
+                        navbar.setUsername(jsonData.username);
 
                     } catch (error) {
                         console.error('Error al parsear JSON:', error);

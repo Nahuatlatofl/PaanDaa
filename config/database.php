@@ -2,7 +2,7 @@
  class Database
   {
     private $hostname = "localhost";
-    private $database = "guardar";
+    private $database = "Panaderia";
     private $username = "root";
     private $password = "";
     private $charset = "utf8mb4";
