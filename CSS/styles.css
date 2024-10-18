@@ -31,9 +31,6 @@ body {
     background-repeat: no-repeat;
     font-family: var(--textFont);
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la pantalla */
 }
 
 header {
@@ -74,20 +71,16 @@ header ul li:first-of-type {
 }
 
 header ul li a {
-    font-size: 1.6rem; /* Tamaño de texto más consistente */
+    font-size: 1.4rem;
     text-decoration: none;
-    padding: 0.6rem 2rem; /* Espaciado ajustado */
+    padding: 0.6rem 1.5rem;
     color: var(--white);
     border-radius: 2rem;
-    display: inline-block;
-    width: max-content; /* Asegura que ambos botones tengan el mismo ancho ajustable */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Efecto suave de hover */
 }
 
 header ul li a.register {
     border-radius: 0;
     border: 1px solid var(--white);
-    background-color: transparent;
 }
 
 header ul li a:hover,
@@ -158,8 +151,23 @@ header ul li a.active {
     cursor: pointer;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--textFont);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(var(--pastelColorB), var(--pastelColorA));
+}
+
 .main-content {
-    flex: 1; /* Asegura que el contenido principal ocupe el espacio disponible */
+    flex: 1;
+    /* Esto hace que el contenido principal ocupe el espacio disponible */
     padding: 20px;
 }
 
@@ -170,8 +178,8 @@ footer {
     justify-content: space-evenly;
     background-color: var(--mainColor);
     color: var(--white);
-    position: static; /* Quitamos el position fixed */
-    bottom: 0; /* Asegura que quede al final */
+    position: relative;
+    /* Quitar el position fixed para que no se sobreponga */
 }
 
 .footer-bottom {

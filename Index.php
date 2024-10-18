@@ -12,7 +12,6 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +23,6 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
     <custom-navbar></custom-navbar>
-
     <section class="carousel">
         <div class="carousel-inner">
             <div class="carousel-item">
@@ -52,42 +50,32 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </section>
 
-    <section>
+    <section class="animal-bread">
+    <h2>Panes con Formas de Animales</h2>
+    <div class="bread-gallery">
+        <div class="bread-item">
+            <img src="CSS/image/pan-panda.jpg" alt="Pan en forma de panda">
+            <h3>Pan en forma de Panda</h3>
+            <p>Deliciosos panes en forma de panda, hechos con ingredientes naturales.</p>
+        </div>
+        <div class="bread-item">
+            <img src="CSS/image/pan-oso.jpg" alt="Pan en forma de oso">
+            <h3>Pan en forma de Oso</h3>
+            <p>Panes suaves y esponjosos con adorables formas de ositos.</p>
+        </div>
+        <div class="bread-item">
+            <img src="CSS/image/pan-cerdito.jpg" alt="Pan en forma de cerdito">
+            <h3>Pan en forma de Cerdito</h3>
+            <p>Pan dulce con una divertida forma de cerdito, perfecto para los pequeños.</p>
+        </div>
+        <div class="bread-item">
+            <img src="CSS/image/pan-tortuga.jpg" alt="Pan en forma de tortuga">
+            <h3>Pan en forma de Tortuga</h3>
+            <p>Crujiente por fuera, suave por dentro, con la forma de una tortuguita.</p>
+        </div>
+    </div>
+</section>
 
-   
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-            <?php
-            foreach ($resultado as $row) {
-            ?>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <?php
-                        $id = $row['id'];
-                        $imagen = "img/productos/" . $id . "/pan.jpeg";
-
-                        if (!file_exists($imagen)) {
-                            $imagen = "img/error.jpeg";
-                        }
-
-                        ?>
-                        <img src="<?php echo $imagen; ?>" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
-                            <p class="card-text"><?php echo $row['precio']; ?></p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="#" class="btn btn-primary">Detalles</a>
-                                </div>
-                                <a href="#" class="btn btn-success">Agregar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php
-            }
-            ?>
-    </section>
     
 
             <custom-footer></custom-footer>

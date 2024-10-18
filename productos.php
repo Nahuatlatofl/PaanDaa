@@ -20,7 +20,6 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <!-- Navegación personalizada -->
     <custom-navbar></custom-navbar>
    
     <div class="container">
@@ -54,7 +53,6 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 </div>
 
 
-    <!-- Footer personalizado -->
     <custom-footer></custom-footer>
 
 </body>

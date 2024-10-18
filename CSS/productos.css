@@ -2,7 +2,7 @@
 .container {
 
     max-width: 500px; /* Ajusta según tu diseño */
-  margin-top: 70px;
+  margin-top: 50px;
     padding: 2rem;
 }
 
@@ -11,9 +11,10 @@
     border: none;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #ffffff;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 
 .card:hover {
     transform: translateY(-10px);
@@ -80,39 +81,3 @@
     background-color: #218838;
 }
 
-/* Ajuste responsivo */
-@media (max-width: 1200px) {
-    .row-cols-lg-4 .col {
-        flex: 0 0 25%; /* 4 columnas en pantallas grandes */
-    }
-}
-
-@media (max-width: 992px) {
-    .row-cols-md-3 .col {
-        flex: 0 0 33.33%; /* 3 columnas en pantallas medianas */
-    }
-}
-
-@media (max-width: 768px) {
-    .row-cols-sm-2 .col {
-        flex: 0 0 50%; /* 2 columnas en pantallas pequeñas */
-    }
-
-    .container {
-        padding: 1rem;
-    }
-
-    .card {
-        margin-bottom: 2rem;
-    }
-
-    .card-img-top {
-        height: 180px;
-    }
-}
-
-@media (max-width: 576px) {
-    .row-cols-1 .col {
-        flex: 0 0 100%; /* 1 columna en pantallas muy pequeñas */
-    }
-}
