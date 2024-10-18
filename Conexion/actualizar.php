@@ -12,7 +12,7 @@ if ($fila = $selec-> fetch_assoc());{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizacion</title>
-    <link rel="stylesheet" href="\PaanDaa\Conexion\image-conexion\style2\act.css">
+    <link rel="stylesheet" href="\PaanDaa\Conexion\CSS\actualizarC.css">
 
    
 </head>
@@ -20,6 +20,7 @@ if ($fila = $selec-> fetch_assoc());{
 <body>
     <form action="/PaanDaa/Conexion/update.php" method="post">
         <input type="hidden" name='id' value="<?php echo $id ?>">
+        <label for="">Nombre</label>
         <input type="text" name='NombreCompleto' placeholder="Nombre Completo"
             value="<?php echo $fila['NombreCompleto'] ?>"><br>
         <input type="submit" value="actualizar">

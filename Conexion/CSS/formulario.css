@@ -1,26 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+
+/* Estilos generales del cuerpo */
+
+/* Contenedor del formulario centrado */
+#formulario-container {
+    margin-top:70px;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
+/* Estilos del formulario */
 #formulario {
-    background-color: transparent;
+    background-color: #b98a0a;
     padding: 30px;
     border-radius: 10px;
     width: 300px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255); /* Sombra para darle profundidad */
+    border: 1px solid #007bff; /* Borde con color que resalta */
 }
 
+/* Estilos de los inputs */
 input[type="text"],
 input[type="number"],
 input[type="submit"] {
-    background-color: transparent;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -29,45 +35,56 @@ input[type="submit"] {
     box-sizing: border-box;
 }
 
+/* Estilos al enfocar inputs */
 input[type="text"]:focus,
 input[type="number"]:focus {
     outline: none;
     border-color: #007bff;
-    box-shadow: 0 0 5px #09048b;
+    box-shadow: 0 0 5px #007bff;
 }
 
+/* Botón submit */
 input[type="submit"] {
-    background-color: transparent;
-    color: rgb(255, 255, 255);
+    background-color: #007bff;
+    color: white;
     border: none;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #000000;
+    background-color: #0056b3;
 }
 
+/* Botón de comentarios */
 button {
     display: block;
     margin: 10px auto;
     padding: 10px 20px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: #007bff;
+    color: white;
     border-radius: 5px;
-    text-decoration: none;
+    cursor: pointer;
+    border: none;
 }
 
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del texto del botón */
 button a {
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
 }
 
+/* Título del formulario */
 h1 {
     text-align: center;
-    color: transparent;
+    color: white;
     margin-bottom: 20px;
 }
 
+/* Enlaces */
 .links {
     text-align: center;
     align-items: center;
@@ -75,13 +92,8 @@ h1 {
     margin-bottom: 20px; 
 }
 
+/* Estilo de las etiquetas */
 label {
-    font-family: Georgia;
-    color: rgb(255, 255, 255);
-}
-
-body {
-    background-image: url("/proyecto_web/Conexion/image-conexion/formulario2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    font-family: Georgia, serif;
+    color: white;
 }

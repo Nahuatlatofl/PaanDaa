@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmación</title>
-    <link rel="stylesheet" href="\PaanDaa\Conexion\image-conexion\style2\connect.css">
+    <link rel="stylesheet" href="\PaanDaa\Conexion\CSS\conexionRE.css">
     
 </head>
 <body>
@@ -20,7 +20,7 @@
 
         if ($insert) {
             echo "<p>Registro Exitoso de datos</p>";
-            header("refresh:1; url=formulario.php");
+            header("refresh:1; url=/PaanDaa/Conexion/Comentarios.php");
         } else {
             echo "<p>NO se Registró Exitosamente</p>";
         }

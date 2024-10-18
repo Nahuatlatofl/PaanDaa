@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizacion</title>
-    <link rel="stylesheet" href="\PaanDaa\Conexion\image-conexion\style2\actcomen.css">
+    <link rel="stylesheet" href="\PaanDaa\Conexion\CSS\tabla_a_actualizar.css">
 </head>
 <body>
 <table border="1px">

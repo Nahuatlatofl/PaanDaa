@@ -63,5 +63,4 @@
     </table>
     <custom-footer></custom-footer>
 </body>
-<script src="JS/carrousel.js"></script>
 </html>
