@@ -51,32 +51,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </section>
 
-    <section class="animal-bread">
-        <h2>Panes con Formas de Animales</h2>
-        <div class="bread-gallery">
-            <div class="bread-item">
-                <img src="CSS/image/pan-panda.jpg" alt="Pan en forma de panda">
-                <h3>Pan en forma de Panda</h3>
-                <p>Deliciosos panes en forma de panda, hechos con ingredientes naturales.</p>
-            </div>
-            <div class="bread-item">
-                <img src="CSS/image/pan-oso.jpg" alt="Pan en forma de oso">
-                <h3>Pan en forma de Oso</h3>
-                <p>Panes suaves y esponjosos con adorables formas de ositos.</p>
-            </div>
-            <div class="bread-item">
-                <img src="CSS/image/pan-cerdito.jpg" alt="Pan en forma de cerdito">
-                <h3>Pan en forma de Cerdito</h3>
-                <p>Pan dulce con una divertida forma de cerdito, perfecto para los pequeños.</p>
-            </div>
-            <div class="bread-item">
-                <img src="CSS/image/pan-tortuga.jpg" alt="Pan en forma de tortuga">
-                <h3>Pan en forma de Tortuga</h3>
-                <p>Crujiente por fuera, suave por dentro, con la forma de una tortuguita.</p>
-            </div>
-        </div>
-    </section>
-
+    
     <custom-footer></custom-footer>
 
 </body>

@@ -12,7 +12,7 @@ if ($fila = $selec-> fetch_assoc());{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizacion</title>
-    <link rel="stylesheet" href="\PaanDaa\Conexion\CSS\actualizarC.css">
+
 
    
 </head>

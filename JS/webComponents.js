@@ -8,6 +8,7 @@ class CustomNavbar extends HTMLElement {
         this.render();
         this.setupEventListeners();
         this.updateActiveLink();
+        this.updateUsername(); // Verifica y actualiza el nombre de usuario en todas las páginas
     }
 
     render() {
@@ -19,14 +20,12 @@ class CustomNavbar extends HTMLElement {
             <ul>
                 <li><a href="/PaanDaa/Index.php" class="nav-link">Inicio</a></li>
                 <li><a href="/PaanDaa/productos.php" class="nav-link">Productos</a></li>
-                <li><a href="/PaanDaa/Acerca_de.php" class="nav-link">Acerca de</a></li>
-                <li><a href="/PaanDaa/html/Politica.php" class="nav-link">Politica</a></li>
-                <li><a href="#" class="nav-link">Contacto</a></li>
+                <li><a href="/PaanDaa/html/Politica.php" class="nav-link">Política</a></li>
                 <li><a href="/PaanDaa/Conexion/formulario.php" class="nav-link">Opinar</a></li>
                 <li><a href="/PaanDaa/Conexion/Comentarios.php" class="nav-link">Reseñas</a></li>
             </ul> 
             <ul id="register-field">
-                <li><a href="/PaanDaa/html/Sign_in.php" class="register">Log In</a> <a href="/PaanDaa/html/Sign_in.php" class="register">Sign In</a></li>
+                <li><a href="/PaanDaa/html/Log_in.php" class="register">Log In</a> <a href="/PaanDaa/html/Sign_in.php" class="register">Sign In</a></li>
             </ul>
             <div class="footer" style="color: white;" id="user-field">
                 <h3 id="username">Usuario</h3>                
@@ -41,7 +40,7 @@ class CustomNavbar extends HTMLElement {
         this.shadowRoot.appendChild(linkElement);
         this.shadowRoot.appendChild(header);
 
-        this.shadowRoot.getElementById('user-field').style.display = 'none';
+        this.shadowRoot.getElementById('user-field').style.display = 'none'; // Ocultar por defecto
     }
 
     updateActiveLink() {
@@ -68,7 +67,7 @@ class CustomNavbar extends HTMLElement {
 
         loginButton.addEventListener('click', (e) => {
             e.preventDefault();
-            window.location.href = '/PaanDaa/html/Log_in.php'
+            window.location.href = '/PaanDaa/html/Log_in.php';
         });
 
         const logoutButton = this.shadowRoot.getElementById('logout');
@@ -105,11 +104,18 @@ class CustomNavbar extends HTMLElement {
     }
 
     updateUsername() {
-        const username = this.getUsernameFromSession();
+        // Intentar obtener el nombre del usuario desde `localStorage`
+        const username = localStorage.getItem('username');
         if (username) {
-            this.shadowRoot.getElementById('username').textContent = username;
-            this.shadowRoot.getElementById('user-field').style.display = 'block';
-            this.shadowRoot.getElementById('register-field').style.display = 'none';
+            this.setUsername(username);
+        } else {
+            this.getUsernameFromSession().then(username => {
+                if (username) {
+                    this.setUsername(username);
+                    // Guardar el nombre en `localStorage` para futuras referencias
+                    localStorage.setItem('username', username);
+                }
+            });
         }
     }
 
@@ -124,19 +130,16 @@ class CustomNavbar extends HTMLElement {
             const username = jsonData.username;
 
             if (username) {
-                this.shadowRoot.getElementById('username').textContent = username;
-                this.shadowRoot.getElementById('user-field').style.display = 'block';
-                this.shadowRoot.getElementById('register-field').style.display = 'none';
+                return username;
             }
         } catch (error) {
             console.error('Error al obtener el nombre de usuario:', error);
         }
-        return '<?php echo $_SESSION["username"] ?? ""; ?>';
+        return null;
     }
 
 }
 
-// Define el nuevo elemento
 customElements.define('custom-navbar', CustomNavbar);
 
 class CustomFooter extends HTMLElement {
@@ -157,32 +160,18 @@ class CustomFooter extends HTMLElement {
         </div>
         <ul class="list">
             <h2 class="title-list">PÁGINAS</h2>
-            <li><a href="/PaanDaa/Index.html">Inicio</a></li>
-            <li><a href="/PaanDaa/html/Acerca_de.html">Acerca de</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="/PaanDaa/Index.php">Inicio</a></li>
+            <li><a href="/PaanDaa/productos.php">Productos</a></li>
+            <li><a href="/PaanDaa/Conexion/Comentarios.php">Reseñas</a></li>
         </ul>
         <ul class="list">
             <h2 class="title-list">LEGALES</h2>
-            <li><a href="#">Aviso Legal</a></li>
-            <li><a href="/PaanDaa/html/Politica.html">Términos y Condiciones</a></li>
+            <li><a href="/PaanDaa/html/Politica.php">Politica de privacidad</a></li>
         </ul>
         <div class="list">
             <h2 class="title-list">SÍGUENOS</h2>
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
+            <li><a href=""></a>Instagram</li>
+            <li><a href=""></a>Facebook</li>
         </div>
         <div class="footer-bottom">
             <p>Centro de Bachillerato Tecnológico Industrial y de Servicios No. 3</p>
