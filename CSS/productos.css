@@ -1,9 +1,15 @@
-/* Contenedor principal - Ajustado para el ancho completo */
+/* Contenedor principal */
 .container {
+    max-width: 7000px;
+    margin-top: 60px;
+    padding: 4rem;
+}
 
-    max-width: 500px; /* Ajusta según tu diseño */
-  margin-top: 50px;
-    padding: 2rem;
+/* Grid para los productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre los productos */
 }
 
 /* Estilo de las tarjetas de productos */
@@ -14,7 +20,6 @@
     background-color: #ffffff;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 
 .card:hover {
     transform: translateY(-10px);
@@ -29,7 +34,7 @@
 }
 
 .card-body {
-    padding: 1.5rem;
+    padding: 2rem;
     text-align: center;
 }
 
@@ -80,4 +85,3 @@
 .btn-success:hover {
     background-color: #218838;
 }
-
