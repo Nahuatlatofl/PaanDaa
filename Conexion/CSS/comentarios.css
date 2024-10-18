@@ -1,18 +1,4 @@
-/* Estilos globales para la página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    background-image: url("/PaanDaa/Conexion/image-conexion/Comentarios.jpg"); /* Ruta corregida */
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-    color: white;
-}
+
 
 table {
     border-collapse: collapse;
@@ -28,18 +14,18 @@ th, td {
 }
 
 th {
-    background-color: rgba(255, 255, 255, 0.5); /* Ajuste en la opacidad */
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste en la opacidad */
     color: black;
 }
 
 td {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Estilos para enlaces */
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Estilos para el botón personalizado */

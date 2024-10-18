@@ -4,34 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/PaanDaa/Conexion/image-conexion/style2/barra_nav.css">
-    <link rel="stylesheet" href="/PaanDaa/Conexion/image-conexion/style2/coment.css">
+    <link rel="stylesheet" href="/PaanDaa/Conexion/CSS/comentarios.css">
+    <link rel="stylesheet" href="/PaanDaa/CSS/styles.css">
+    <script src="/PaanDaa/JS/webComponents.js"></script>
+    <link rel="icon" href="/PaanDaa/CSS/favicon/favicon.ico" type="image/x-icon">
     <title>Comentarios</title>
 </head>
 
 <body>
-    <div class="barra-nav">
-        <a href="/PaanDaa/Index.html" class="logo-link">
-            <div class="logo-container">
-                <img src="/PaanDaa/Base de datos/Conexion/image-conexion/LOGO.jpg" alt="Logo">
-                <h1>PannDaa</h1>
-                <div class="eslogan">Dulzura suave, Tradición fuerte</div>
-            </div>
-        </a>
-        <div class="busqueda-container">
-            <input type="text" placeholder="Buscar...">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Carrito</a></li>
-                <li><a href="#">Trabaja con nosotros</a></li>
-                <li><a href="#">Política de privacidad</a></li>
-                <li><a href="/PaanDaa/html/Acerca_De.html">Acerca de</a></li>
-                <li><a href="/PaanDaa/Conexion/formulario.php">Opinar</a></li>
-                <li><a href="/PaanDaa/Conexion/Comentarios.php">Reseñas</a></li>
-            </ul>
-        </nav>
-    </div>
+<custom-navbar></custom-navbar>
     
     <table border="1px">
         <tr>
@@ -80,6 +61,7 @@
         </tr>
         <?php } ?>
     </table>
+    <custom-footer></custom-footer>
 </body>
-
+<script src="JS/carrousel.js"></script>
 </html>
